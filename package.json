@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/hamidrezatakloo/cryptoApp/issues"
   },
-  "homepage": "https://github.com/hamidrezatakloo/cryptoApp#readme"
+  "homepage": "https://github.com/hamidrezatakloo/cryptoApp#readme",
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
 }
