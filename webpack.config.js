@@ -7,7 +7,12 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
   module: {
-    rules: [],
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+    ],
   },
   mode: "development",
 };
