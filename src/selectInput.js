@@ -12,10 +12,16 @@ const focusedSelect = () => {
 
 let activeOption = 0;
 
+const setValue = () => {
+  select.innerHTML = options[activeOption].innerHTML;
+  select.value = options[activeOption].innerHTML;
+};
+
 const hoverOptions = (i) => {
   options[activeOption].classList.remove("active");
   options[i].classList.add("active");
   activeOption = i;
+  setValue();
 };
 
 export { focusedSelect, unFocusedSelect };
