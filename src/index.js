@@ -1,3 +1,7 @@
 import "./sass/index.sass";
 
-console.log("worked");
+document.addEventListener("click", (e) => {
+  if (!e.target.matches(".select")) {
+  } else {
+  }
+});
