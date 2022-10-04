@@ -1,3 +1,5 @@
+$gray: #607081
+
 .select
     position: relative
     width: 200px
@@ -5,9 +7,20 @@
     border-radius: 10px
     border: none
     text-transform: capitalize
-    color: #607081
+    color: $gray
     border: 2px solid #A0B2EE
     text-align: left
     padding: 0 15px
     font-size: 16px
     cursor: pointer
+
+    &::after
+        content: ''
+        position: absolute
+        right: 20px
+        top: 50%
+        transform: translateY(-50%) rotate(45deg)
+        width: 6px
+        height: 6px
+        border-right: 2px solid $gray
+        border-bottom: 2px solid $gray
