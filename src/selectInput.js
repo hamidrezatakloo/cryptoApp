@@ -30,6 +30,7 @@ const startListenOptions = () => {
       hoverOptions(i);
     });
   });
+  setValue();
 };
 
 export { focusedSelect, unFocusedSelect, startListenOptions };
