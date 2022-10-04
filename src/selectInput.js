@@ -24,4 +24,12 @@ const hoverOptions = (i) => {
   setValue();
 };
 
-export { focusedSelect, unFocusedSelect };
+const startListenOptions = () => {
+  options.forEach((item, i) => {
+    item.addEventListener("mousemove", () => {
+      hoverOptions(i);
+    });
+  });
+};
+
+export { focusedSelect, unFocusedSelect, startListenOptions };
