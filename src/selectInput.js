@@ -10,4 +10,12 @@ const focusedSelect = () => {
   optionBox.classList.toggle("active");
 };
 
+let activeOption = 0;
+
+const hoverOptions = (i) => {
+  options[activeOption].classList.remove("active");
+  options[i].classList.add("active");
+  activeOption = i;
+};
+
 export { focusedSelect, unFocusedSelect };
