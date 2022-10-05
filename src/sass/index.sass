@@ -1,10 +1,10 @@
 @use 'default'
 @use 'select'
 
-%flex-center
+@mixin flex-center($justify: center)
     display: flex
     flex-direction: column
-    justify-content: center
+    justify-content: $justify
     align-items: center
 
 .container
@@ -15,7 +15,7 @@
 
 
 .top-section
-    @extend %flex-center
+    @include flex-center
     flex: 1
     padding:20px
     
@@ -38,7 +38,7 @@
     grid-template-columns: 1fr 4fr
 
     .left-panel
-        @extend %flex-center
+        @include flex-center
 
     .information
         display: grid
@@ -50,7 +50,7 @@
             font-weight: bold
 
         .date
-            @extend %flex-center
+            @include flex-center
             grid-row: 1 / -1
             font-size: 2rem
             font-weight: bold            
