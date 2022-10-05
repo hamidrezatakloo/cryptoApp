@@ -45,6 +45,10 @@
         grid-template-columns: 1fr 2fr 2fr
         grid-template-rows: 1fr 1fr
 
+        div:not(:nth-child(1))
+            font-size: 1.6rem
+            font-weight: bold
+
         .date
             @extend %flex-center
             grid-row: 1 / -1
