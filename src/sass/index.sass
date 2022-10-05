@@ -1,9 +1,9 @@
 @use 'default'
 @use 'select'
 
-@mixin flex-center($justify: center)
+@mixin flex-center($justify: center ,$direction: column)
     display: flex
-    flex-direction: column
+    flex-direction: $direction
     justify-content: $justify
     align-items: center
 
@@ -46,6 +46,7 @@
         grid-template-rows: 1fr 1fr
 
         div:not(:nth-child(1))
+            @include flex-center($justify: space-around , $direction: row)
             font-size: 1.6rem
             font-weight: bold
 
