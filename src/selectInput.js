@@ -14,7 +14,7 @@ let activeOption = 0;
 
 const setValue = () => {
   select.innerHTML = options[activeOption].innerHTML;
-  select.value = options[activeOption].innerHTML;
+  select.value = options[activeOption].querySelector("p").textContent;
 };
 
 const hoverOptions = (i) => {
