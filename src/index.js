@@ -12,7 +12,7 @@ const checkBox = document.querySelector(".checkbox");
 document.addEventListener("click", (e) => {
   if (e.target.matches(".options>.item")) checkBox.classList.add("checked");
 
-  if (!e.target.matches(".select")) {
+  if (!e.target.matches(".select-input *")) {
     unFocusedSelect();
   } else {
     checkBox.classList.remove("checked");
