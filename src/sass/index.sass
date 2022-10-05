@@ -51,7 +51,13 @@
             @include flex-center($justify: space-around , $direction: row)
             font-size: 1.6rem
             font-weight: bold
-
+        
+            &:nth-child(2n)
+                .value
+                    color: #06D6A0
+            &:nth-child(2n-1)
+                .value
+                    color: #EF476F
         .date
             @include flex-center
             grid-row: 1 / -1
