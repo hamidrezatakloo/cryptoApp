@@ -5,12 +5,17 @@ import {
   startListenOptions,
 } from "./selectInput";
 
+import updateInfo from "./getData";
+
 startListenOptions();
 
 const checkBox = document.querySelector(".checkbox");
 
 document.addEventListener("click", (e) => {
-  if (e.target.matches(".options>.item")) checkBox.classList.add("checked");
+  if (e.target.matches(".options>.item")) {
+    checkBox.classList.add("checked");
+    updateInfo(e.target.id);
+  }
 
   if (!e.target.matches(".select-input *")) {
     unFocusedSelect();
