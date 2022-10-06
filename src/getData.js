@@ -48,6 +48,8 @@ const updateInfo = async (id) => {
 
   const lowPrice = document.querySelector(".low-price>.value");
   lowPrice.textContent = coinInfo.l;
+
+  switchLoading();
 };
 
 export default updateInfo;
