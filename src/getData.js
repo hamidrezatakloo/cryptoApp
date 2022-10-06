@@ -30,7 +30,7 @@ const filterCoin = (data, tickerSymbol) => {
 
 const updateInfo = async (id) => {
   const { data } = await groupedDaily();
-  const coinInfo = filterCoin(data, id);
+  const coinInfo = filterCoin(data, id)[0];
 
   const openPrice = document.querySelector(".open-price");
   openPrice.textContent = coinInfo.o;
