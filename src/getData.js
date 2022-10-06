@@ -32,16 +32,16 @@ const updateInfo = async (id) => {
   const { data } = await groupedDaily();
   const coinInfo = filterCoin(data, id)[0];
 
-  const openPrice = document.querySelector(".open-price");
+  const openPrice = document.querySelector(".open-price>.value");
   openPrice.textContent = coinInfo.o;
 
-  const closePrice = document.querySelector(".close-price");
+  const closePrice = document.querySelector(".close-price>.value");
   closePrice.textContent = coinInfo.c;
 
-  const highPrice = document.querySelector(".high-price");
+  const highPrice = document.querySelector(".high-price>.value");
   highPrice.textContent = coinInfo.h;
 
-  const lowPrice = document.querySelector(".low-price");
+  const lowPrice = document.querySelector(".low-price>.value");
   lowPrice.textContent = coinInfo.l;
 };
 
