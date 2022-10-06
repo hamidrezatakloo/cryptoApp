@@ -29,7 +29,7 @@ const filterCoin = (data, tickerSymbol) => {
 };
 
 const updateInfo = (id) => {
-  const data = groupedDaily();
+  const { data } = groupedDaily();
   const coinInfo = filterCoin(data, id);
 
   const openPrice = document.querySelector(".open-price");
