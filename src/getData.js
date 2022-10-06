@@ -52,4 +52,4 @@ const updateInfo = async (id) => {
   switchLoading();
 };
 
-export default updateInfo;
+export { updateInfo, switchLoading };
