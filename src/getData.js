@@ -24,3 +24,20 @@ const filterCoin = (data, tickerSymbol) => {
   const coinInfo = data.filter((x) => x.T === tickerSymbol);
   return coinInfo;
 };
+
+const updateInfo = (id) => {
+  const data = groupedDaily();
+  const coinInfo = filterCoin(data, id);
+
+  const openPrice = document.querySelector(".open-price");
+  openPrice.textContent = coinInfo.o;
+
+  const closePrice = document.querySelector(".close-price");
+  closePrice.textContent = coinInfo.c;
+
+  const highPrice = document.querySelector(".high-price");
+  highPrice.textContent = coinInfo.h;
+
+  const lowPrice = document.querySelector(".low-price");
+  lowPrice.textContent = coinInfo.l;
+};
