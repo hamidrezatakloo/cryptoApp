@@ -20,8 +20,7 @@ const groupedDaily = async () => {
   }
 };
 
-const filterCoins = (data) => {
-  const filter = ["X:USDTUSD", "X:BTCUSD", "X:ETHUSD"];
-  const filterData = data.filter((x) => filter.includes(x.T));
-  return filterData;
+const filterCoin = (data, tickerSymbol) => {
+  const coinInfo = data.filter((x) => x.T === tickerSymbol);
+  return coinInfo;
 };
