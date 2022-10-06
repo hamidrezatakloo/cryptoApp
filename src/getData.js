@@ -28,8 +28,8 @@ const filterCoin = (data, tickerSymbol) => {
   return coinInfo;
 };
 
-const updateInfo = (id) => {
-  const { data } = groupedDaily();
+const updateInfo = async (id) => {
+  const { data } = await groupedDaily();
   const coinInfo = filterCoin(data, id);
 
   const openPrice = document.querySelector(".open-price");
