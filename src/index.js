@@ -7,6 +7,9 @@ import {
 
 import updateInfo from "./getData";
 
+const activeID = document.querySelector(".item.active").id;
+updateInfo(activeID);
+
 startListenOptions();
 
 const checkBox = document.querySelector(".checkbox");
