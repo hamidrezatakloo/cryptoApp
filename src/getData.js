@@ -6,21 +6,23 @@ const getYesterday = () => {
   return yesterday;
 };
 
+let firstData;
+
 const groupedDaily = async () => {
-  let data;
   let error = "";
+  if (firstData) return { data: firstData, error };
   const response = await fetch(
     `https://api.polygon.io/v2/aggs/grouped/locale/global/market/crypto/${getYesterday()}?adjusted=true&apiKey=PeWHlEcjh_T7PvDn5briSyXfXNyjqe28`
   );
 
   if (response.status >= 200 && response.status <= 299) {
     const jsonResponse = await response.json();
-    data = jsonResponse.results;
+    firstData = jsonResponse.results;
   } else {
     // Handle errors
     error = response.statusText;
   }
-  return { data, error };
+  return { data: firstData, error };
 };
 
 const filterCoin = (data, tickerSymbol) => {
