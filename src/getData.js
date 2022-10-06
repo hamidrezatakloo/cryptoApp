@@ -28,6 +28,11 @@ const filterCoin = (data, tickerSymbol) => {
   return coinInfo;
 };
 
+const switchLoading = () => {
+  const loading = document.querySelector(".loading");
+  loading.classList.toggle("loaded");
+};
+
 const updateInfo = async (id) => {
   const { data } = await groupedDaily();
   const coinInfo = filterCoin(data, id)[0];
