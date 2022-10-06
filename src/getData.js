@@ -44,3 +44,5 @@ const updateInfo = (id) => {
   const lowPrice = document.querySelector(".low-price");
   lowPrice.textContent = coinInfo.l;
 };
+
+export default updateInfo;
