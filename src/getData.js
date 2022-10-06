@@ -7,17 +7,20 @@ const getYesterday = () => {
 };
 
 const groupedDaily = async () => {
+  let data;
+  let error = "";
   const response = await fetch(
     `https://api.polygon.io/v2/aggs/grouped/locale/global/market/crypto/${getYesterday()}?adjusted=true&apiKey=PeWHlEcjh_T7PvDn5briSyXfXNyjqe28`
   );
 
   if (response.status >= 200 && response.status <= 299) {
     const jsonResponse = await response.json();
-    console.log(jsonResponse);
+    data = JSON.parse(jsonResponse.results);
   } else {
     // Handle errors
-    console.log(response.status, response.statusText);
+    error = response.statusText;
   }
+  return { data, error };
 };
 
 const filterCoin = (data, tickerSymbol) => {
