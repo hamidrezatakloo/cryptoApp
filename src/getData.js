@@ -15,7 +15,7 @@ const groupedDaily = async () => {
 
   if (response.status >= 200 && response.status <= 299) {
     const jsonResponse = await response.json();
-    data = JSON.parse(jsonResponse.results);
+    data = jsonResponse.results;
   } else {
     // Handle errors
     error = response.statusText;
