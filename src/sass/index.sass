@@ -35,19 +35,27 @@
     box-shadow: 0 -4px 8px rgba(0,0,0,.2),0 -6px 20px rgba(0,0,0,.2)
     padding: 10px
     display: grid
-    grid-template-columns: 1fr 4fr
+    grid-template-columns: 2fr 4fr
     background-color: #1c0221
     color: #ffffff
 
     .left-panel
-        @include flex-center
+        display: grid
+        grid-template-rows: 1fr
+        grid-template-columns: 1fr 1fr
+        align-items: center
+        .date
+            font-size: 2rem
+            font-weight: bold
+            text-align: center
+            margin-left: 10px 
 
     .information
         display: grid
-        grid-template-columns: 1fr 2fr 2fr
+        grid-template-columns: 1fr 1fr
         grid-template-rows: 1fr 1fr
 
-        div:not(:nth-child(1))
+        div
             @include flex-center($justify: space-around , $direction: row)
             font-size: 1.6rem
             font-weight: bold
@@ -58,12 +66,7 @@
             &:nth-child(2n-1)
                 .value
                     color: #EF476F
-        .date
-            @include flex-center
-            grid-row: 1 / -1
-            font-size: 2rem
-            font-weight: bold
-            text-align: center
+
 
         .value
         
